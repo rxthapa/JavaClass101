@@ -37,5 +37,47 @@ public class BankTest {
         else
             System.out.println("Insufficient Balance");
 
+        Address Address1=new Address();
+        Address1.setCity("Irving");
+        Address1.setState("Texas");
+        Address1.setStname("Walnut hill ln");
+        Address1.setZip(75038);
+
+        Address Address2=new Address();
+        Address2.setCity("heaven");
+        Address2.setState("new york");
+        Address2.setStname("Coconut hill ln");
+        Address2.setZip(70028);
+
+        Employee employee1=new Employee();
+        employee1.setDept("Hr");
+        employee1.setFname("Rabin");
+        employee1.setId(123456);
+        employee1.setLname("Khadka");
+        employee1.setMnane("Jpt");
+        employee1.setPh(468852164);
+        employee1.setSalary(4000);
+
+        Employee employee2=new Employee();
+        employee2.setDept("Finance");
+        employee2.setFname("John");
+        employee2.setId(654321);
+        employee2.setLname("Wright");
+        employee2.setMnane("Johny");
+        employee2.setPh(466031563);
+        employee2.setSalary(30000);
+
+        Employee[] newarry={employee1,employee2};
+
+        Branches branch1=new Branches();
+        branch1.setBranch_Manager("rabnkhadka");
+        branch1.setAddressLocation("Irving");
+        branch1.setHoursofBusiness("9-5");
+        branch1.setPh(452215566);
+        branch1.setEmployeelist(newarry);
+
+
+
+
     }
 }
