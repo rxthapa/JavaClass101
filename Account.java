@@ -1,49 +1,62 @@
+package com.JavaClass101;
+
 public class Account {
-    private long balance;
-    private long accountNo;
-    private String type;
+	private double balance;
+	private long accountNo;
+	private String type;
+	private String status;
 
+	
+	public String getStatus() {
+		return status;
+	}
 
-    public String getType() {
-        return type;
-    }
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
-    public void setType(String type) {
-        this.type = type;
-    }
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
 
-    public long getBalance() {
-        return balance;
-    }
+	public String getType() {
+		return type;
+	}
 
-    public void setBalance(long balance) {
-        this.balance = balance;
-    }
+	public void setType(String type) {
+		this.type = type;
+	}
 
-    public long getAccountNo() {
-        return accountNo;
-    }
+	public double getBalance() {
+		return balance;
+	}
 
-    public void setAccountNo(long accountNo) {
-        this.accountNo = accountNo;
-    }
+	public void setBalance(long balance) {
+		this.balance = balance;
+	}
 
-    public boolean withdraw(long amount) {
-        if (balance >= amount) {
-            balance = balance - amount;
-            return true;
-        } else {
-            return false;
-        }
-    }
-    public static void withdrawl(int balance){
-        int newbalance=0;
+	public long getAccountNo() {
+		return accountNo;
+	}
 
-        newbalance=balance+50;
-        if(balance<-100);
-        System.out.println(newbalance);
+	public void setAccountNo(long accountNo) {
+		this.accountNo = accountNo;
+	}
 
+	public boolean withdraw(long amount) {
+		if (balance >= amount) {
+			balance = balance - amount;
+			return true;
+		} else if ((balance - amount) > -100) {
+			balance = balance - (amount + 50);
+			return true;
+		} else {
+			return false;
+		}
+	}
 
-    }
+	public double deposite(double amount) {
+		balance = balance + amount;
+		return balance;
+	}
 }
-

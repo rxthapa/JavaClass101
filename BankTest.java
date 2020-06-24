@@ -1,3 +1,5 @@
+package com.JavaClass101;
+
 public class BankTest {
     public static void main(String[] args) {
         Account a1 = new Account();
@@ -6,11 +8,13 @@ public class BankTest {
         a1.setAccountNo(1234567);
         a1.setBalance(1000);
         a1.setType("checking");
-
+        a1.setStatus("open");
+        
         a2.setAccountNo(9998898);
         a2.setBalance(15000);
         a2.setType("Saving");
-
+        a2.setStatus("open");
+        
         Customer customer1 = new Customer();
         customer1.setFname("Roshan");
         customer1.setLname("Thapa");
@@ -28,14 +32,34 @@ public class BankTest {
         Customer[] customerarray = {customer1, customer2};
 
         System.out.println(customer1.getSavingAccount().getBalance());
-        boolean successful = customer1.getSavingAccount().withdraw(5000);
-        print(successful);
-        boolean success = customer1.getSavingAccount().withdraw(35000);
-        print(success);
-        boolean success1 = customer1.getSavingAccount().withdraw(10000);
-        print(success1);
+        boolean successful = customer1.getSavingAccount().withdraw(15050);
+        System.out.println(successful);
+       // print(successful) boolean success = customer1.getSavingAccount().withdraw(000);
+       // print(success);
+      
+        customer1.getSavingAccount().deposite(1000);
+   
 
         System.out.println(customer1.getSavingAccount().getBalance());
+        
+        System.out.println(customer1.getSavingAccount().getAccountNo());
+        customer1.getSavingAccount().setAccountNo(10000000);
+        System.out.println(customer1.getSavingAccount().getAccountNo());
+        
+        customer1.closeCheckingAccount();
+        customer1.closeAccount("Checking");
+        
+        customer1.closeSavinggAccount();
+        customer1.closeAccount("Saving");
+        
+        customer1.closeAccount("sfdsafasd");
+        
+        
+        System.out.println(customer1.getCheckingAccount().getStatus());
+        System.out.println(customer1.getSavingAccount().getStatus());
+        
+    
+        
     }
 
 
@@ -107,9 +131,11 @@ public class BankTest {
 
         System.out.println(BOA.getTotalEmployee());
         Branches.hireemployee(50);
-        Customer.closeCheckingAccount(100);
-        Account.withdrawl(-100);
-
+        
+        
+        
+        
+       
 
 
     }
