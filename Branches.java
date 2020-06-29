@@ -1,8 +1,10 @@
+
+
 public class Branches {
     private String AddressLocation;
     private String HoursofBusiness;
     private long Ph;
-    private Employee Branch_Manager;
+    private String Branch_Manager;
     private Employee[] employeelist;
 
     public String getAddressLocation() {
@@ -29,11 +31,11 @@ public class Branches {
         Ph = ph;
     }
 
-    public Employee getBranch_Manager() {
+    public String getBranch_Manager() {
         return Branch_Manager;
     }
 
-    public void setBranch_Manager(Employee branch_Manager) {
+    public void setBranch_Manager(String branch_Manager) {
         Branch_Manager = branch_Manager;
     }
 
@@ -44,4 +46,26 @@ public class Branches {
     public void setEmployeelist(Employee[] employeelist) {
         this.employeelist = employeelist;
     }
+
+    public void hireemployees(Employee emp) {
+        int i;
+        for( i=0;i<employeelist.length;i++){
+            if(employeelist[i]==null){
+                break;
+            }
+
+        }employeelist[i]=emp;
+
+    }
+    public void increaseSalary(int amount){
+
+        for(int i=0;i<employeelist.length;i++){
+            //int newsalary=getSalary()+amout;
+            //System.out.println(newsalary);
+
+
+
+        }
+    }
 }
+
