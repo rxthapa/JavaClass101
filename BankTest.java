@@ -1,142 +1,126 @@
-package com.JavaClass101;
+package com.bank;
+
+import com.JavaClass101.Employee;
 
 public class BankTest {
-    public static void main(String[] args) {
-        Account a1 = new Account();
-        Account a2 = new Account();
+	public static void main(String[] args) {
+		
+		
+		
+		Account bb = new Account();
+		bb.setBalance(1000);
+		bb.setAccountNo(456);
+		bb.setType("Saving");
+		
+		Account cc = new Account();
+		cc.setBalance(1000);
+		cc.setAccountNo(789);
+		cc.setType("Saving");
+		
+		
+		Account d = new Account();
+		d.setBalance(1000);
+		d.setAccountNo(999);
+		d.setType("Saving");
+		Account aa = new Account();
+		aa.setBalance(-12334344);
+		aa.setAccountNo(123);
+		aa.setType("Checking");
+		Customer customer1 = new Customer();
 
-        a1.setAccountNo(1234567);
-        a1.setBalance(1000);
-        a1.setType("checking");
-        a1.setStatus("open");
-        
-        a2.setAccountNo(9998898);
-        a2.setBalance(15000);
-        a2.setType("Saving");
-        a2.setStatus("open");
-        
-        Customer customer1 = new Customer();
-        customer1.setFname("Roshan");
-        customer1.setLname("Thapa");
-        customer1.setPhoneNumber(2145006158);
-        customer1.setCheckingAccount(a1);
-        customer1.setSavingAccount(a2);
+		customer1.setFname("Thapa");
+		customer1.setLname("Roshan");
+		customer1.setPhoneNumber(2145006158);
+		customer1.setCheckingAccount(aa);
+		customer1.setSavingAccount(cc);
+		
+		System.out.println(customer1.getSavingAccount().getAccountNo());
+		System.out.println(customer1.getCheckingAccount().getBalance());
+		System.out.println(customer1.getSavingAccount().getType());
+		
+		
+		
+		System.out.println(aa.getType());
+		
+		
 
-        Customer customer2 = new Customer();
-        customer2.setFname("Rakesh");
-        customer2.setLname("k.c");
-        customer2.setPhoneNumber(51245158);
-        customer2.setCheckingAccount(a2);
-        customer2.setSavingAccount(a1);
+		double x = 12333;
 
-        Customer[] customerarray = {customer1, customer2};
+//data 23roshan;
 
-        System.out.println(customer1.getSavingAccount().getBalance());
-        boolean successful = customer1.getSavingAccount().withdraw(15050);
-        System.out.println(successful);
-       // print(successful) boolean success = customer1.getSavingAccount().withdraw(000);
-       // print(success);
-      
-        customer1.getSavingAccount().deposite(1000);
-   
+		char z = 23;
+//'roshan';
+		char a = 'r';
+		char b = 'o';
+		char c = 's';
+		char e = 'a';
+		char f = 'n';
 
-        System.out.println(customer1.getSavingAccount().getBalance());
-        
-        System.out.println(customer1.getSavingAccount().getAccountNo());
-        customer1.getSavingAccount().setAccountNo(10000000);
-        System.out.println(customer1.getSavingAccount().getAccountNo());
-        
-        customer1.closeCheckingAccount();
-        customer1.closeAccount("Checking");
-        
-        customer1.closeSavinggAccount();
-        customer1.closeAccount("Saving");
-        
-        customer1.closeAccount("sfdsafasd");
-        
-        
-        System.out.println(customer1.getCheckingAccount().getStatus());
-        System.out.println(customer1.getSavingAccount().getStatus());
-        
-    
-        
-    }
+		char[] chararray = { 2, 3, 'r', 'o', 's', 'h', 'a', 'n' };
 
+		String data = "23roshan";
+		System.out.println(data.charAt(4));
+		System.out.println(chararray[4]);
 
-    public static void print(boolean value) {
-        if (value)
-            System.out.println("Here is your cash");
-        else
-            System.out.println("Insufficient Balance");
+//roshan thapa 2145006518 1223232 10000 dpt 
+//ggg thapa 21450rddd 1223232 10000 dpt 
+		Employee empl = new Employee("roshan", "thapa", (long) 2145006, 1223, 10000, "dpt");
+		Employee empl11 = new Employee("hvh", "hbh", (long) 2145006, 1223, 10000, "dpt");
 
-        Address Address1=new Address();
-        Address1.setCity("Irving");
-        Address1.setState("Texas");
-        Address1.setStname("Walnut hill ln");
-        Address1.setZip(75038);
+//irving
+//99.099
 
-        Address Address2=new Address();
-        Address2.setCity("heaven");
-        Address2.setState("new york");
-        Address2.setStname("Coconut hill ln");
-        Address2.setZip(70028);
+		// String data= "sfsfsdgfsdgfsdfgds";
+		String data1 = "sfsfsdgfsdgfsdfgds   dfdfdfdfd";
 
-        Employee employee1=new Employee();
-        employee1.setDept("Hr");
-        employee1.setFname("Rabin");
-        employee1.setId(123456);
-        employee1.setLname("Khadka");
-        employee1.setMnane("Jpt");
-        employee1.setPh(468852164);
-        employee1.setSalary(4000);
+		Account a1 = new Account();
+		Account a2 = new Account();
 
-        Employee employee2=new Employee();
-        employee2.setDept("Finance");
-        employee2.setFname("John");
-        employee2.setId(654321);
-        employee2.setLname("Wright");
-        employee2.setMnane("Johny");
-        employee2.setPh(466031563);
-        employee2.setSalary(30000);
+		a1.setAccountNo(1234567);
+		a1.setBalance(1000);
+		a1.setType("checking");
 
-        Employee[] newarry={employee1,employee2};
-        Customer[] customerarray={};
+		a1.withdraw(1000);
 
+		System.out.println(a1.getBalance());
 
-        Branches branch1=new Branches();
-        branch1.setBranch_Manager("rabnkhadka");
-        branch1.setAddressLocation("Irving");
-        branch1.setHoursofBusiness("9-5");
-        branch1.setPh(452215566);
-        branch1.setEmployeelist(newarry);
+		a2.setAccountNo(9998898);
+		a2.setBalance(15000);
+		a2.setType("Saving");
 
-        Branches branch2=new Branches();
-        branch2.setBranch_Manager("Skhadka");
-        branch2.setAddressLocation("Irving");
-        branch2.setHoursofBusiness("9-5");
-        branch2.setPh(416416312);
-        branch2.setEmployeelist(newarry);
+		
+		
+		
+		
+		
+		
+		//customer1
+		
+		
+		
 
+		System.out.println(customer1.getSavingAccount().getBalance());
 
-       Branches[] brancharry={branch1,branch2};
-        Bank BOA=new Bank();
-        BOA.setAllcbranches(brancharry);
-        BOA.setAllcustomer(customerarray);
-        BOA.setTotalEmployee(500);
+		boolean successful = customer1.getSavingAccount().withdraw(5000);
+		print(successful);
+		boolean success = customer1.getSavingAccount().withdraw(35000);
+		print(success);
+		boolean success1 = customer1.getSavingAccount().withdraw(10000);
+		print(success1);
 
-        Bank chase=new Bank();
-        chase.setAllcbranches(brancharry);
-        chase.setAllcustomer(customerarray);
-        chase.setTotalEmployee(500);
+		System.out.println(customer1.getSavingAccount().getBalance());
+		Employee ee = new Employee();
+		ee.setSalary(1000);
+		ee.setSalary(1000 + ee.getSalary());
+		System.out.println(ee.getSalary());
 
-        System.out.println(BOA.getTotalEmployee());
-        Branches.hireemployee(50);
-        
-        
-        
-        
-       
+	}
 
+	public static void print(boolean value) {
+		if (value)
+			System.out.println("Here is your cash");
+		else
+			System.out.println("Insufficient Balance");
 
-    }
+	}
 }

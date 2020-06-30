@@ -1,23 +1,10 @@
-package com.JavaClass101;
+package com.bank;
 
 public class Account {
-	private double balance;
+
+	private long balance;
 	private long accountNo;
 	private String type;
-	private String status;
-
-	
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
 
 	public String getType() {
 		return type;
@@ -27,7 +14,7 @@ public class Account {
 		this.type = type;
 	}
 
-	public double getBalance() {
+	public long getBalance() {
 		return balance;
 	}
 
@@ -47,16 +34,9 @@ public class Account {
 		if (balance >= amount) {
 			balance = balance - amount;
 			return true;
-		} else if ((balance - amount) > -100) {
-			balance = balance - (amount + 50);
-			return true;
-		} else {
+		}else {
 			return false;
 		}
-	}
 
-	public double deposite(double amount) {
-		balance = balance + amount;
-		return balance;
 	}
 }
