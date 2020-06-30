@@ -1,7 +1,21 @@
 public class Account {
-    private long balance;
+    private double balance;
     private long accountNo;
     private String type;
+    private String status;
+
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
 
     public String getType() {
         return type;
@@ -11,11 +25,15 @@ public class Account {
         this.type = type;
     }
 
-    public long getBalance() {
+    public double getBalance() {
+        if(balance<0){
+            System.out.println("IS negative");
+        }
         return balance;
     }
 
     public void setBalance(long balance) {
+
         this.balance = balance;
     }
 
@@ -31,9 +49,16 @@ public class Account {
         if (balance >= amount) {
             balance = balance - amount;
             return true;
-        }else {
+        } else if ((balance - amount) > -100) {
+            balance = balance - (amount + 50);
+            return true;
+        } else {
             return false;
         }
+    }
 
+    public double deposite(double amount) {
+        balance = balance + amount;
+        return balance;
     }
 }
