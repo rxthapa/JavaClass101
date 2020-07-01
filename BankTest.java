@@ -44,20 +44,51 @@ public class BankTest {
 		        e1.setLname ("Lammichane");
 		        e1.setPh(4695866566);
 		        e1.setId(2565230);
+		        e1.setSalary (2000);
+		        
+		        employees e2 = new employees();
+		        
+		        e2.setFname("Ganesh");
+		        e2.setMname("Prasad");
+		        e2.setLname ("Bahsyal");
+		        e2.setPh(485520302);
+		        e2.setId(2565230d);
+		        e2.setSalary (3000);
+		        
+		        employees[] newArray = {e1, e2};
+		        
 		        System.out.println(e1.getFname());
 		        System.out.println(e1.getLname());
 		        System.out.println(e1.getMname());
 		        System.out.println(e1.getLname());
 		        System.out.println(e1.getPh());
 		        System.out.println(e1.getId());
+		        System.out.println(e1.getSalary());
+		        
+		        e1.setSalary(1000 + e1.getSalary());
+				System.out.println(e1.getSalary());
+		        
+		        Branches b1 = new Branches ();
+		        b1.setAddressLocation("Irving");
+		        b1.setBranch_Manager("Ramesh Shrestha");
+		        b1.setSalary(1000);
+		        
+		        
+		        System.out.println(b1.newSalary());
+		        
+		        
+		        
+		       
+		        
+		       
 		        
 		        
 		        
 		        
 
 		        
-		        boolean successful = customer1.getSavingAccount().withdraw(15050);
-		        System.out.println(successful);
+		        
+		        
 	}
 		
 		
