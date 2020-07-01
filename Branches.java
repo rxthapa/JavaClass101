@@ -1,3 +1,5 @@
+
+
 public class Branches {
     private String AddressLocation;
     private String HoursofBusiness;
@@ -45,12 +47,23 @@ public class Branches {
         this.employeelist = employeelist;
     }
 
-    public static void hireemployee(int Employee) {
-        if (Employee <= 21) {
-        System.out.println("hire employee");
-    }else {
-            System.out.println("no hiring");
+    public void hireemployees(Employee emp) {
+        int i;
+        for( i=0;i<employeelist.length;i++){
+            if(employeelist[i]==null){
+                break;
+            }
+
+        }employeelist[i]=emp;
+
+    }
+    public void increaseSalary(int amount){
+     
+        for(int i=0;i<employeelist.length;i++){
+            employeelist[0].setSalary(employeelist[0].getSalary()+amount);
 
         }
+
     }
 }
+
