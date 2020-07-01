@@ -14,12 +14,18 @@ public class Account {
 		this.type = type;
 	}
 
-	public long getBalance() {
+	public double getBalance() {
 		return balance;
 	}
 
-	public void setBalance(long balance) {
-		this.balance = balance;
+	public void setBalance(long amount) {
+		//what is your balance??  100
+		
+		if (amount > 0) {
+			balance = amount+balance;
+		}
+		
+		//what is ur balance now 0
 	}
 
 	public long getAccountNo() {
@@ -34,7 +40,7 @@ public class Account {
 		if (balance >= amount) {
 			balance = balance - amount;
 			return true;
-		}else {
+		} else {
 			return false;
 		}
 
