@@ -1,9 +1,17 @@
 package com.bank;
 
+import com.JavaClass101.Bank;
 import com.JavaClass101.Employee;
+import com.JavaClass101.Branches;
 
 public class BankTest {
 	public static void main(String[] args) {
+		Bank mybank = new Bank();
+		
+		//System.out.println(mybank.employeeWork("rabin"));
+		
+		
+		
 		Employee e1 = new Employee();
 		e1.setFname("Roshan");
 		e1.setSalary(1000);
@@ -15,6 +23,13 @@ public class BankTest {
 		b1.setAddressLocation("Irving Location");
 		b1.setEmployeelist(emplist);
 		
+		Branches[] allcbranches = {b1};
+		mybank.setAllcbranches(allcbranches);
+		
+		System.out.println(mybank.employeeWork("Pabitra"));
+		
+		System.out.println(mybank.employeeWork("Roshan"));
+		System.out.println(mybank.employeeWork("Rabin"));
 		
 		
 		// b1 branch object

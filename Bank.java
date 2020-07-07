@@ -1,70 +1,47 @@
+package com.JavaClass101;
+
 public class Bank {
-    private Customer[] allcustomer;
-    private Branches[] allcbranches;
-    private int Salary;
-    private int totalEmployee;
+	private Customer[] allcustomer;
+	private Branches[] allcbranches; 
+	private int totalEmployee;
 
-    public int getSalary() {
-        return Salary;
-    }
+	public Customer[] getAllcustomer(Customer[] customerarray) {
+		return allcustomer;
+	}
 
-    public void setSalary(int salary) {
-        Salary = salary;
-    }
+	public void setAllcustomer(Customer[] allcustomer) {
+		this.allcustomer = allcustomer;
+	}
 
-    public Customer[] getAllcustomer(Customer[] customerarray) {
-        return allcustomer;
-    }
+	public Branches[] getAllcbranches() {
+		return allcbranches;
+	}
 
-    public void setAllcustomer(Customer[] allcustomer) {
-        this.allcustomer = allcustomer;
-    }
+	public void setAllcbranches(Branches[] allcbranches) {
+		this.allcbranches = allcbranches;
+	}
 
-    public Branches[] getAllcbranches() {
-        return allcbranches;
-    }
+	public int getTotalEmployee() {
+		return totalEmployee;
+	}
 
-    public void setAllcbranches(Branches[] allcbranches) {
-        this.allcbranches = allcbranches;
-    }
+	public void setTotalEmployee(int totalEmployee) {
+		this.totalEmployee = totalEmployee;
+	}
 
-    public int getTotalEmployee() {
-        return totalEmployee;
-    }
+	public String employeeWork(String name) {
+		String branch = null;
+		for (int n = 0; n < allcbranches.length; n++) {
+			Employee[] templist = allcbranches[n].getEmployeelist();
+			for (int i = 0; i < templist.length; i++) {
+				if (templist[i].getFname().equals(name)) {
+					branch = allcbranches[n].getAddressLocation();
+					break;
+				}
+			}
 
-    public void setTotalEmployee(int totalEmployee) {
-        this.totalEmployee = totalEmployee;
-    }
-    public void increaseSalary(int amount){
-        if(Salary<=amount) {
-            Salary = Salary + 1000;
+		}
 
-        }else{
-            Salary=Salary+0;
-
-
-
-        }
-       /* public String customerLookup(){    //customerLookuop(string fname). Looks for the customer and return customer data
-            int j;
-            for(int j=0;j<allcustomer.length;j++);
-            allcustomer[j].getFname();
-            return String;
-
-        */
-
-
-
-    }public void employeeWork(String name){          //find branchname where a employee works(lookup with fname)
-
-
-        int n;
-        for(n=0; n<allcbranches.length;n++){
-            allcbranches[n].getEmployeelist();
-            if(allcbranches.equals(name));
-            return;
-
-        }
-    }
-
+		return branch;
+	}
 }
